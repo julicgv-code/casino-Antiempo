@@ -1,0 +1,121 @@
+body {
+    background: #111;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nombre input {
+    background: black;
+    color: cyan;
+    border: 1px solid cyan;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.saldo {
+    font-size: 40px;
+    color: gold;
+    font-weight: bold;
+}
+
+.saldo.animar {
+    animation: dineroPop 0.5s;
+}
+
+@keyframes dineroPop {
+    50% { transform: scale(1.4); color: lime; }
+}
+
+.titulo {
+    color: gold;
+}
+
+.mensaje {
+    font-size: 28px;
+    font-weight: bold;
+    animation: aparecer 0.5s;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.slot {
+    font-size: 50px;
+    background: black;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+button:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 10px cyan;
+}
+
+.apuestas button {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.retirar {
+    background: darkgreen;
+    color: white;
+}
+
+.panel {
+    margin-top: 20px;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    margin: auto;
+}
+
+.girando {
+    animation: colores 0.2s infinite;
+    color: white;
+}
+
+@keyframes colores {
+    0% { background: red; }
+    25% { background: orange; }
+    50% { background: blue; }
+    75% { background: green; }
+    100% { background: purple; }
+}
+
+.ganador {
+    animation: glow 0.5s infinite alternate;
+}
+
+@keyframes glow {
+    to { box-shadow: 0 0 25px yellow; }
+}

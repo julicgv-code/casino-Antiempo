@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CASINO ANTIEMPO</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="nombre">
+            👤 <input id="inputNombre" placeholder="Tu nombre">
+        </div>
+
+        <div class="saldo">
+            💰 $<span id="creditos">100</span>
+        </div>
+    </div>
+
+    <h1 class="titulo">🎰 CASINO ANTIEMPO 🎰</h1>
+
+    <div id="mensaje" class="mensaje"></div>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="apuestas">
+        <button onclick="setApuesta(1)">$1</button>
+        <button onclick="setApuesta(5)">$5</button>
+        <button onclick="setApuesta(25)">$25</button>
+        <button onclick="setApuesta(50)">$50</button>
+        <button onclick="setApuesta(100)">$100</button>
+    </div>
+
+    <button onclick="girar()">🎰 GIRAR</button>
+
+    <br>
+    <button onclick="retirar()" class="retirar">🏦 RETIRAR</button>
+
+    <div class="panel">
+        <h2>📊 ESTADÍSTICAS</h2>
+        <p>👤 <span id="nombreStats">Jugador</span></p>
+        <p>💰 Ganado: $<span id="totalGanado">0</span></p>
+        <p>💸 Perdido: $<span id="totalPerdido">0</span></p>
+        <p>📈 Ganancia real: $<span id="gananciaTotal">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
